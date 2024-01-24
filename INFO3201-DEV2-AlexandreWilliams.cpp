@@ -1,6 +1,5 @@
 //Devoir 2 INFO3201
 // Alexandre Williams
-// A00211478
 #include <iostream>
 #include <fstream>
 #include <vector>
