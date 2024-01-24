@@ -8,7 +8,7 @@
 
 using namespace std;
 
- //encoder en Hamming une séquence de données binaire
+//encoder en Hamming une séquence de données binaire
 vector<int> genererCodeHamming(const vector<int>& donnees) {
     cout << "Code original : ";
     for (int i = 0; i < donnees.size(); i++) {
@@ -34,21 +34,6 @@ vector<int> genererCodeHamming(const vector<int>& donnees) {
             n++;
         }
     }
-
-    //Code pour placer les elements du mot par indices inverses
-        //int n = donnees.size()-1;
-        //for (int i = 0; i < taillecode; i++) {
-        //    if (i + 1 == pow(2, j)) {
-        //        code[i] = -1;  //-1 valeur initial pour les bits de parite
-        //        j++;
-        //    }
-        //    else {
-        //        code[i] = donnees[n];
-        //        n--;
-        //    }
-        //}
-
-
     for (int position = 1; position <= taillecode; position *= 2) {
         int parite = 0;
         //calcul de parite
@@ -123,13 +108,7 @@ int main() {
             cout << "Code de hamming : ";
             for (int bit : codeHamming) {
                 cout << bit;
-                
             }
-            //si on place le mot par indice inverse
-            /*for (int i = codeHamming.size() - 1; i >= 0; i--)
-            {
-                cout << codeHamming[i];
-            }*/
             cout << endl;
             vector<int> codeRecu = codeHamming;
             int indice = 4;
@@ -138,6 +117,5 @@ int main() {
         }
     }
     fichier.close();
-
     return 0;
 }
